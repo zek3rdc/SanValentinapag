@@ -14,4 +14,17 @@ function crearCorazon() {
   
   // Generar un corazón cada 300ms
   setInterval(crearCorazon, 300);
-  
+
+// Controlador de música
+const music = document.getElementById("background-music");
+const toggleButton = document.getElementById("toggle-music");
+
+toggleButton.addEventListener("click", () => {
+  if (music.paused) {
+    music.play();
+    toggleButton.textContent = "🔊 Pausar Música";
+  } else {
+    music.pause();
+    toggleButton.textContent = "🔇 Reproducir Música";
+  }
+});
