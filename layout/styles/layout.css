@@ -378,3 +378,24 @@ table a, #comments a{background-color:inherit;}
 
 	#header #quickinfo li{margin-right:0;}
 }
+
+.corazon {
+	position: fixed;
+	top: -50px;
+	font-size: 24px;
+	animation: caer 5s linear infinite;
+	z-index: 9999;
+	color: red;
+  }
+  
+  @keyframes caer {
+	0% {
+	  transform: translateY(0) rotate(0deg);
+	  opacity: 1;
+	}
+	100% {
+	  transform: translateY(100vh) rotate(360deg);
+	  opacity: 0;
+	}
+  }
+  
