@@ -398,4 +398,50 @@ table a, #comments a{background-color:inherit;}
 	  opacity: 0;
 	}
   }
+
+/* Botón flotante */
+.floating-button {
+	position: fixed;
+	bottom: 80px; /* Ajustado para evitar superposición */
+	right: 20px;
+	width: 50px;
+	height: 50px;
+	background-color: rgba(255, 255, 255, 0.2); /* Fondo transparente */
+	color: #ff4081;
+	font-size: 24px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 50%;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+	transition: opacity 0.3s ease, transform 0.3s ease;
+	z-index: 1000;
+	backdrop-filter: blur(5px); /* Efecto de desenfoque detrás */
+	border: 2px solid rgba(255, 255, 255, 0.5); /* Borde suave */
+  }
+  
+  /* Botón oculto */
+  .floating-button.hidden {
+	opacity: 0;
+	transform: translateY(100px);
+	pointer-events: none;
+  }
+  
+  /* Animación de movimiento */
+  @keyframes move-icon {
+	0%, 100% {
+	  transform: translateY(0);
+	}
+	50% {
+	  transform: translateY(-5px); /* Mueve hacia arriba */
+	}
+  }
+  
+  /* Ícono animado */
+  .floating-button.playing {
+	animation: move-icon 0.5s infinite; /* Aplica movimiento continuo */
+  }
+  
+  
   

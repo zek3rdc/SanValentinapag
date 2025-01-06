@@ -16,19 +16,32 @@ function crearCorazon() {
 // Generar un corazón cada 300ms
 setInterval(crearCorazon, 300);
 
-// Controlador de música
-const music = document.getElementById("background-music");
-const toggleButton = document.getElementById("toggle-music");
 
-toggleButton.addEventListener("click", () => {
+//controladores de musica
+const music = document.getElementById("background-music");
+const musicControl = document.getElementById("music-control");
+
+// Controlar el audio al hacer clic en el botón
+musicControl.addEventListener("click", () => {
   if (music.paused) {
-    music.play().then(() => {
-      toggleButton.textContent = "🔊 Pausar Música";
-    }).catch(error => {
-      console.error("Error al reproducir música:", error);
-    });
+    music.play();
+    musicControl.textContent = "🔇"; // Cambia el ícono
+    musicControl.classList.add("playing"); // Activa la animación
   } else {
     music.pause();
-    toggleButton.textContent = "🎵 Iniciar Música";
+    musicControl.textContent = "🎵"; // Cambia el ícono
+    musicControl.classList.remove("playing"); // Detiene la animación
   }
+});
+
+// Ocultar el botón al hacer scroll
+let scrollTimeout;
+window.addEventListener("scroll", () => {
+  musicControl.classList.add("hidden");
+
+  // Mostrar el botón después de 1 segundo sin movimiento
+  clearTimeout(scrollTimeout);
+  scrollTimeout = setTimeout(() => {
+    musicControl.classList.remove("hidden");
+  }, 1000);
 });
