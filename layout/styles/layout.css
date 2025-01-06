@@ -164,6 +164,16 @@ nav ul, nav ol{margin:0; padding:0; list-style:none;}
 #mainav form select, #mainav form select option{display:block; cursor:pointer; outline:none;}
 #mainav form select{width:100%; padding:5px; border:none;}
 #mainav form select option{margin:5px; padding:0; border:none;}
+@media (max-width: 768px) {
+	#mainav .drop ul {
+	  display: none !important; /* Asegúrate de que no se muestre en móviles */
+	}
+  
+	/* Si deseas ocultar el menú desplegable por completo en móviles */
+	#mainav .drop {
+	  display: none !important; /* Oculta la clase drop completamente */
+	}
+  }
 
 /* Breadcrumb */
 #breadcrumb{padding:120px 0 20px;}
