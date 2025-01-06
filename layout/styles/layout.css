@@ -453,5 +453,9 @@ table a, #comments a{background-color:inherit;}
 	animation: move-icon 0.5s infinite; /* Aplica movimiento continuo */
   }
   
+  .small-video {
+	width: 60%; /* Ajusta el ancho al 60% del contenedor */
+	height: auto; /* Mantiene la proporción del video */
+  }
   
   
