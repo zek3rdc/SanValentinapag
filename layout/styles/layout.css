@@ -458,4 +458,40 @@ table a, #comments a{background-color:inherit;}
 	height: auto; /* Mantiene la proporción del video */
   }
   
-  
+  .sectiontitle { text-align: center;
+ }
+
+ .heading { text-align: center; }
+
+ .sectiontitle, .one_half { text-align: center; } 
+ 
+ .one_half video { display: block; margin: 0 auto; }
+
+ .wall-clock {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: #fefefe;
+	border: 10px solid #333;
+	border-radius: 20px;
+	padding: 20px 40px;
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+	text-align: center;
+  }
+
+  .time-display {
+	font-size: 2em;
+	font-weight: bold;
+	color: #333;
+  }
+
+  .message {
+	font-size: 1.2em;
+	margin-top: 10px;
+	color: #555;
+  }
+
+  .highlight {
+	color: #e63946;
+  }

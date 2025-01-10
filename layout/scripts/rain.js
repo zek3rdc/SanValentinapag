@@ -45,3 +45,23 @@ window.addEventListener("scroll", () => {
     musicControl.classList.remove("hidden");
   }, 1000);
 });
+
+//control del reloj
+const startTime = new Date('2024-09-17T00:00:00Z').getTime();
+const timeDisplay = document.getElementById('timeDisplay');
+
+function updateTime() {
+  const now = new Date().getTime();
+  const elapsedTime = now - startTime;
+
+  const seconds = Math.floor((elapsedTime / 1000) % 60);
+  const minutes = Math.floor((elapsedTime / (1000 * 60)) % 60);
+  const hours = Math.floor((elapsedTime / (1000 * 60 * 60)) % 24);
+  const days = Math.floor(elapsedTime / (1000 * 60 * 60 * 24));
+
+  // Actualizar el reloj digital
+  timeDisplay.textContent = `${days} días, ${hours} horas, ${minutes} minutos, ${seconds} segundos`;
+}
+
+setInterval(updateTime, 1000);
+updateTime();
