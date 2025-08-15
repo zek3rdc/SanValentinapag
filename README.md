@@ -36,10 +36,10 @@ El archivo de audio se encuentra en la carpeta /media/.
 
 Reemplaza el archivo background-music.mp3 por tu canción preferida, asegurándote de que el nuevo archivo tenga exactamente el mismo nombre.
 
-** 👤 Autor**
+**👤 Autor**
 Nombre: Zek3rdc
 
-** 📄 Licencia**
+**📄 Licencia**
 Este proyecto fue creado utilizando una plantilla base. La licencia de la plantilla original se puede consultar en el archivo licence.txt.
 
 Creado con ❤️ para una celebración especial.
